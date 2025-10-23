@@ -33,12 +33,35 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
+Step1: Define the specifications and initialize the design.
+Step2: Declare the name of the entity and architecture by using VHDL source code.
+Step3: Write the source code in VERILOG.
+Step4: Check the syntax and debug the errors if found, obtain the synthesis report.
+Step5: Verify the output by simulating the source code.
+Step6: Write all possible combinations of input using the test bench.
+Step7: Obtain the place and route report.
 
 /* write all the steps invloved */
 
 **PROGRAM**
+module jk_ff (j, k, clk, rst, q);
+  input j, k, clk, rst;
+  output reg q;
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else if (j == 0 && k == 0)
+      q <= q; // No change
+    else if (j == 0 && k == 1)
+      q <= 0; // Reset
+    else if (j == 1 && k == 0)
+      q <= 1; // Set
+    else if (j == 1 && k == 1)
+      q <= ~q; // Toggle
+  end
+endmodule
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:santhosh sivakumar RegisterNumber:25013000
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
@@ -46,3 +69,4 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
 **RESULTS**
+Thus the JK flip flop circuits are designed and the truth tables is verified using quartus software
