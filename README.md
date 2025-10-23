@@ -65,8 +65,10 @@ endmodule
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+![WhatsApp Image 2025-10-23 at 23 44 14_98267c9f](https://github.com/user-attachments/assets/27b339d3-8274-4214-b1ed-82cf1fd0e540)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![WhatsApp Image 2025-10-23 at 23 45 19_5f63808d](https://github.com/user-attachments/assets/0b8a2e77-0fa5-4055-8414-9fa6eeba136c)
 
 **RESULTS**
 Thus the JK flip flop circuits are designed and the truth tables is verified using quartus software
